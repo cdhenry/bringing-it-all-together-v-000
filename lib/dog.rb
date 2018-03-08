@@ -82,8 +82,7 @@ class Dog
     SQL
 
     row = DB[:conn].execute(sql, name).flatten
-    dog_hash = {:name => row[1], :breed => row[2]}
-    Dog.new(row[0], dog_hash)
+    self.new_from_db(row)
   end
 
 end
