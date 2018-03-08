@@ -64,7 +64,7 @@ class Dog
       dog = Dog.new(dog_data[0], dog_data[1], dog_data[2])
     else
       dog_hash = {:name => name, :breed => breed}
-      dog = self.create(dog_hash)
+      dog = self.create(name, breed)
     end
     dog
   end
